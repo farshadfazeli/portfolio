@@ -3660,86 +3660,155 @@
         ];
 
         const educationData = [
-            {
-                name: 'B.Sc. in Computer Engineering',
-                role: { fa: 'دانشگاه آزاد اسلامی، تهران مرکزی', en: 'Islamic Azad University, Central Tehran' },
-                init: 'B',
-                fa: '',
-                en: '',
-                subtitle: { fa: 'کارشناسی مهندسی کامپیوتر — دانشگاه آزاد اسلامی، تهران مرکزی', en: 'B.Sc. in Computer Engineering — Islamic Azad University, Central Tehran' },
-                detail: {
-                    fa: [
-                        '<strong>معدل:</strong> ۱۶.۴ از ۲۰',
-                        '<strong>مهندسی نرم‌افزار:</strong> ۲۰/۲۰',
-                        '<strong>هوش مصنوعی:</strong> ۱۸/۲۰',
-                        '<strong>پایگاه داده:</strong> ۱۸/۲۰',
-                        '<strong>ساختمان داده:</strong> ۱۷.۵/۲۰',
-                        '<strong>ریاضیات گسسته:</strong> ۱۷/۲۰',
-                        '<strong>برنامه‌نویسی پیشرفته:</strong> ۱۶/۲۰',
-                        '<strong>فارغ‌التحصیلی:</strong> پاییز ۲۰۲۷'
-                    ],
-                    en: [
-                        '<strong>GPA:</strong> 16.4/20',
-                        '<strong>Software Engineering:</strong> 20/20',
-                        '<strong>Artificial Intelligence:</strong> 18/20',
-                        '<strong>Database Systems:</strong> 18/20',
-                        '<strong>Data Structures:</strong> 17.5/20',
-                        '<strong>Discrete Mathematics:</strong> 17/20',
-                        '<strong>Advanced Programming:</strong> 16/20',
-                        '<strong>Expected graduation:</strong> Fall 2027'
-                    ]
-                },
-                tags: []
-            },
-            {
-                name: 'Persian NLP',
-                role: { fa: 'پژوهش مشترک، منتشرشده', en: 'Collaborative Research, Published' },
-                init: 'P',
-                fa: '',
-                en: '',
-                subtitle: { fa: 'تنوع املایی و نرمال‌سازی ورودی در پرسش‌های چندگزینه‌ای مدل‌های زبانی فارسی', en: 'Orthographic Variation and Input Normalization in Persian LLM MCQ' },
-                detail: {
-                    fa: [
-                        '<strong>موضوع:</strong> بررسی اثر تنوع املایی فارسی و نرمال‌سازی ورودی بر پرسش‌های چندگزینه‌ای',
-                        '<strong>تمرکز:</strong> حروف شبیه ی/ک و نیم‌فاصله (ZWNJ)',
-                        '<strong>پروتکل:</strong> ارزیابی جفت‌شده با ورودی اصلی، تغییرات کنترل‌شده و دو رویکرد نرمال‌سازی (قاعده‌محور و Hazm 0.10.0)',
-                        '<strong>مدل:</strong> Qwen2.5-1.5B-Instruct (Q4_K_M)، اجرای محلی',
-                        '<strong>یافته کلیدی:</strong> بازگشت ظاهری پاسخ‌ها ناشی از بازگردانی ورودی اصلی است نه نرمال‌سازی — یافته‌ای روش‌شناختی درباره نحوه اندازه‌گیری سود نرمال‌سازی',
-                        '<strong>وضعیت:</strong> آزمایش‌ها کامل، مقاله منتشرشده (پژوهش مشترک)'
-                    ],
-                    en: [
-                        '<strong>Topic:</strong> Effect of Persian orthographic variation and input normalization on MCQ',
-                        '<strong>Focus:</strong> Similar yeh/kaf forms and ZWNJ variations',
-                        '<strong>Protocol:</strong> Paired evaluation comparing original input, controlled changes, and two normalization approaches (rule-based and Hazm 0.10.0)',
-                        '<strong>Model:</strong> Qwen2.5-1.5B-Instruct (Q4_K_M), run locally',
-                        '<strong>Key finding:</strong> Apparent recovery of perturbed answers is explained by restoration of original input, not normalization — a methodological finding',
-                        '<strong>Status:</strong> Experiments completed, paper published (collaborative research)'
-                    ]
-                },
-                tags: ['Persian NLP', 'LLM Evaluation', 'Text Normalization', 'Qwen2.5']
-            },
-            {
-                name: 'IELTS',
-                role: { fa: 'مدرک زبان', en: 'Language Certificate' },
-                init: 'I',
-                fa: '',
-                en: '',
-                subtitle: { fa: 'آیلتس — مدرک زبان انگلیسی', en: 'IELTS — English Language Certificate' },
-                detail: {
-                    fa: [
-                        '<strong>آیلتس:</strong> نمره کلی ۶.۵ (در حال ارتقا)',
-                        '<strong>زبان مادری:</strong> فارسی',
-                        '<strong>انگلیسی:</strong> سطح حرفه‌ای برای نگارش علمی و توسعه نرم‌افزار'
-                    ],
-                    en: [
-                        '<strong>IELTS:</strong> Overall 6.5 (in progress)',
-                        '<strong>Native language:</strong> Persian',
-                        '<strong>English:</strong> Professional level for academic writing and software development'
-                    ]
-                },
-                tags: ['IELTS', 'English', 'Persian']
-            },
-        ];
+    {
+        name: 'B.Sc. in Computer Engineering',
+        role: { fa: 'دانشگاه آزاد اسلامی، تهران مرکزی', en: 'Islamic Azad University, Central Tehran' },
+        init: 'B',
+        fa: '',
+        en: '',
+        subtitle: { fa: 'کارشناسی مهندسی کامپیوتر — دانشگاه آزاد اسلامی، تهران مرکزی (فارغ‌التحصیلی: پاییز ۲۰۲۷)', en: 'B.Sc. in Computer Engineering — Islamic Azad University, Central Tehran Branch (Expected Fall 2027)' },
+        detail: {
+            fa: [
+                '<strong>معدل دو سال اخیر:</strong> ۱۷.۵ از ۲۰',
+                '<strong>مهندسی نرم‌افزار:</strong> ۲۰/۲۰',
+                '<strong>هوش مصنوعی:</strong> ۱۸/۲۰',
+                '<strong>پایگاه داده:</strong> ۱۸/۲۰',
+                '<strong>ساختمان داده:</strong> ۱۷.۵/۲۰',
+                '<strong>ریاضیات گسسته:</strong> ۱۷/۲۰',
+                '<strong>برنامه‌نویسی پیشرفته:</strong> ۱۶/۲۰',
+                '<strong>فارغ‌التحصیلی مورد انتظار:</strong> پاییز ۲۰۲۷',
+                '<strong>موقعیت:</strong> تهران، ایران'
+            ],
+            en: [
+                '<strong>GPA (last two years):</strong> 17.5/20',
+                '<strong>Software Engineering:</strong> 20/20',
+                '<strong>Artificial Intelligence:</strong> 18/20',
+                '<strong>Database Systems:</strong> 18/20',
+                '<strong>Data Structures:</strong> 17.5/20',
+                '<strong>Discrete Mathematics:</strong> 17/20',
+                '<strong>Advanced Programming:</strong> 16/20',
+                '<strong>Expected graduation:</strong> Fall 2027',
+                '<strong>Location:</strong> Tehran, Iran'
+            ]
+        },
+        tags: ['Software Engineering', 'AI', 'Database', 'Data Structures', 'Discrete Math']
+    },
+    {
+        name: 'Persian NLP & LLM Evaluation',
+        role: { fa: 'پژوهش مشترک — در انتظار بازبینی', en: 'Collaborative Research — Awaiting Review' },
+        init: 'P',
+        fa: '',
+        en: '',
+        subtitle: { fa: 'تنوع املایی و نرمال‌سازی ورودی در پرسش‌های چندگزینه‌ای مدل‌های زبانی فارسی: یک پروتکل آزمایشی جفت‌شده', en: 'Orthographic Variation and Input Normalization in Persian LLM Multiple-Choice Question Answering: A Paired Pilot Protocol' },
+        detail: {
+            fa: [
+                '<strong>موضوع:</strong> بررسی اثر تنوع املایی فارسی و نرمال‌سازی ورودی بر پرسش‌های چندگزینه‌ای',
+                '<strong>تمرکز:</strong> حروف شبیه ی/ک و نیم‌فاصله (ZWNJ) در مرزهای واژه',
+                '<strong>پروتکل:</strong> ارزیابی جفت‌شده با ورودی اصلی، تغییرات کنترل‌شده و دو رویکرد نرمال‌سازی (قاعده‌محور و Hazm 0.10.0)',
+                '<strong>مدل:</strong> Qwen2.5-1.5B-Instruct (Q4_K_M)، اجرای محلی',
+                '<strong>یافته کلیدی:</strong> هیچ‌یک از نرمال‌سازها دقت کلی را بهبود نداد؛ بازگشت ظاهری پاسخ‌ها ناشی از بازگردانی ورودی اصلی است نه نرمال‌سازی — یافته‌ای روش‌شناختی درباره نحوه اندازه‌گیری سود نرمال‌سازی',
+                '<strong>وضعیت:</strong> آزمایش‌ها کامل شده؛ پژوهش مشترک با پژوهشگر دیگر و در انتظار بازبینی استاد راهنما',
+                '<strong>محدودیت‌ها:</strong> یافته‌ها مقدماتی و محدود به یک مدل کوچک و مجموعه ارزیابی نسبتاً کوچک است'
+            ],
+            en: [
+                '<strong>Topic:</strong> Effect of Persian orthographic variation and input normalization on MCQ',
+                '<strong>Focus:</strong> Visually similar yeh/kaf forms and ZWNJ variations in word boundaries',
+                '<strong>Protocol:</strong> Paired evaluation comparing original input, controlled changes, and two normalization approaches (rule-based and Hazm 0.10.0)',
+                '<strong>Model:</strong> Qwen2.5-1.5B-Instruct (Q4_K_M), run locally',
+                '<strong>Key finding:</strong> Neither normalizer improved overall accuracy; apparent recovery is explained by restoration of original input, not normalization — a methodological finding on how benefits should be measured',
+                '<strong>Status:</strong> Experiments completed; collaborative research with another researcher, manuscript awaiting supervisor review',
+                '<strong>Limitations:</strong> Findings are preliminary and limited to one small model and a relatively small evaluation set'
+            ]
+        },
+        tags: ['Persian NLP', 'LLM Evaluation', 'Text Normalization', 'Qwen2.5']
+    },
+    {
+        name: 'FlakyScan — Flaky-Test Detector',
+        role: { fa: 'پروژه نرم‌افزاری منتخب', en: 'Selected Software Project' },
+        init: 'F',
+        fa: '',
+        en: '',
+        subtitle: { fa: 'ابزار خط فرمان برای شناسایی تست‌های ناپایدار در .NET (C#, xUnit, GitHub Actions)', en: 'Command-line tool for detecting flaky tests in .NET (C#, xUnit, GitHub Actions)' },
+        detail: {
+            fa: [
+                '<strong>کارکرد:</strong> اجرای چندباره پروژه تست .NET، تجزیه نتایج TRX و گزارش تست‌هایی که هم پاس و هم رد می‌شوند همراه با نرخ شکست',
+                '<strong>شامل:</strong> تست واحد، پروژه نمونه با تست‌های عمداً ناپایدار، یکپارچه‌سازی پیوسته (CI) و مستندسازی احتمال از دست دادن تست ناپایدار بر اساس تعداد اجراها',
+                '<strong>فناوری:</strong> C#, xUnit, GitHub Actions'
+            ],
+            en: [
+                '<strong>Function:</strong> Reruns a .NET test project several times, parses TRX results, and reports tests that both pass and fail, with their failure rates',
+                '<strong>Includes:</strong> Unit tests, a sample project with intentionally flaky tests, continuous integration, and documentation of how the chance of missing a flaky test depends on the number of runs',
+                '<strong>Stack:</strong> C#, xUnit, GitHub Actions'
+            ]
+        },
+        tags: ['C#', 'xUnit', 'GitHub Actions', 'Testing', 'CI']
+    },
+    {
+        name: 'LLM-Generated Tests for C# Libraries',
+        role: { fa: 'طراحی مطالعه تجربی — در حال انجام', en: 'Empirical Study Design — In Progress' },
+        init: 'L',
+        fa: '',
+        en: '',
+        subtitle: { fa: 'آیا تست‌های تولیدشده توسط LLM برای کتابخانه‌های کوچک C# به پوشش بالا اما امتیاز جهش پایین می‌رسند؟ (Coverlet, Stryker.NET)', en: 'Do LLM-generated unit tests for small open-source C# libraries reach high coverage but low mutation score? (Coverlet, Stryker.NET)' },
+        detail: {
+            fa: [
+                '<strong>سؤال پژوهشی:</strong> مقایسه تست‌های تولیدشده توسط LLM با تست‌های دست‌نویس انسان در کتابخانه‌های کوچک C# از نظر پوشش و امتیاز جهش',
+                '<strong>روش:</strong> مطالعه تکرارپذیر با و بدون یک دور بازخورد بر روی جهش‌یافته‌های زنده‌مانده',
+                '<strong>وضعیت:</strong> مخزن شامل سؤالات پژوهشی، روش و تهدیدهای روایی است؛ آزمایش‌ها هنوز اجرا نشده‌اند',
+                '<strong>ابزار:</strong> Coverlet, Stryker.NET'
+            ],
+            en: [
+                '<strong>Research question:</strong> Whether LLM-generated unit tests for small open-source C# libraries reach high coverage but a low mutation score compared with human-written tests',
+                '<strong>Method:</strong> Reproducible study with and without a feedback round on surviving mutants',
+                '<strong>Status:</strong> Repository contains research questions, method, and threats to validity; experiments have not been run yet',
+                '<strong>Tools:</strong> Coverlet, Stryker.NET'
+            ]
+        },
+        tags: ['LLM', 'Mutation Testing', 'C#', 'Coverlet', 'Stryker.NET']
+    },
+    {
+        name: 'Teaching & Knowledge Sharing',
+        role: { fa: 'تدریس و اشتراک دانش', en: 'Teaching & Knowledge Sharing' },
+        init: 'T',
+        fa: '',
+        en: '',
+        subtitle: { fa: 'جلسات آموزشی در دانشگاه و شرکت', en: 'Training sessions in university and company settings' },
+        detail: {
+            fa: [
+                '<strong>الگوهای طراحی نرم‌افزار:</strong> ارائه جلساتی درباره Factory Method، Strategy و Repository در محیط دانشگاه و شرکت',
+                '<strong>معماری میکروسرویس:</strong> تدریس به دانشجویان با پشتیبانی یک اپلیکیشن نمونه عملی .NET 8 (متریال دوره)',
+                '<strong>عامل‌های هوش مصنوعی:</strong> برگزاری جلسات داخلی معرفی مفاهیم AI Agent و کاربردهای آن در توسعه نرم‌افزار (راهنمای جلسه)'
+            ],
+            en: [
+                '<strong>Design Patterns:</strong> Delivered sessions on Factory Method, Strategy, and Repository patterns in university and company settings',
+                '<strong>Microservices Architecture:</strong> Taught students a session supported by a hands-on .NET 8 sample application (course material)',
+                '<strong>AI Agents:</strong> Conducted internal sessions introducing AI-agent concepts and their applications in software development (session guide)'
+            ]
+        },
+        tags: ['Design Patterns', 'Microservices', '.NET 8', 'AI Agents', 'Teaching']
+    },
+    {
+        name: 'IELTS & Languages',
+        role: { fa: 'مدرک زبان', en: 'Language Certificate' },
+        init: 'I',
+        fa: '',
+        en: '',
+        subtitle: { fa: 'آیلتس — در حال آماده‌سازی (تاریخ هدف: بهار ۲۰۲۷)', en: 'IELTS — Preparing (Target test date: Spring 2027)' },
+        detail: {
+            fa: [
+                '<strong>فارسی:</strong> زبان مادری',
+                '<strong>انگلیسی:</strong> در حال آماده‌سازی برای آیلتس؛ تاریخ هدف آزمون بهار ۲۰۲۷',
+                '<strong>سطح فعلی:</strong> حرفه‌ای برای نگارش علمی و توسعه نرم‌افزار'
+            ],
+            en: [
+                '<strong>Persian:</strong> Native',
+                '<strong>English:</strong> Preparing for IELTS; target test date Spring 2027',
+                '<strong>Current level:</strong> Professional for academic writing and software development'
+            ]
+        },
+        tags: ['IELTS', 'English', 'Persian']
+    },
+];
 
 
         function switchTab(tabId) {
